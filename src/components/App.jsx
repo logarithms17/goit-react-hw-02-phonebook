@@ -26,7 +26,6 @@ export class App extends Component {
 
     const deleteInfo = (id) => {
       // implement delete functionality
-      console.log(id)
       this.setState(prevValue => ({
         contacts: prevValue.contacts.filter(contact => contact.id !== id)
       }))
@@ -48,7 +47,6 @@ export class App extends Component {
       // return contacts.filter(contact => contact.name.toLowerCase() === filter.toLowerCase()) {using this method only returns the data if the info is complete}
     }
 
-    console.log(filterContact())
     return ( 
       <div>
         <ContactForm addInfo={addInfo} contacts={contacts} />

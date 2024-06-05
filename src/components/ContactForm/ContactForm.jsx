@@ -27,10 +27,8 @@ export default class ContactForm extends Component {
             contact.name.toLowerCase() === name.toLowerCase()
             )
         })
-            console.log(existingContact)
 
         if (existingContact) {
-            console.log("entered")
             alert(`${name} is already on the list.`)
 
             this.setState(() => ({
@@ -113,5 +111,5 @@ ContactForm.propTypes = {
             name: PropTypes.string.isRequired,
             number: PropTypes.string.isRequired,
         })
-    )
+    ).isRequired
 }

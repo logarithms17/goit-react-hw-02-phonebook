@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import css from './ContactListItem.module.css'
+import PropTypes from 'prop-types'
 
 export default class ContactListItem extends Component {
     render() {
@@ -12,4 +13,14 @@ export default class ContactListItem extends Component {
         </li>
     )
 }
+}
+
+ContactListItem.propTypes = {
+    deleteInfo: PropTypes.func.isRequired,
+    filteredContact: PropTypes.shape({
+        // id: PropTypes.string.isRequired, 
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+    }).isRequired
+        
 }
